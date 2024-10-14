@@ -26,7 +26,7 @@ python3 -m venv mountain_car
 mountain_car\Scripts\activate  # Sur Windows
 source mountain_car/bin/activate  # Sur macOS/Linux
 pip install -r requirements.txt
-python main2-matplotlib-alphas.py  # Deuxième exécution sans rendu visuel
+python main2-matlplotlib-alphas.py  # Deuxième exécution sans rendu visuel
 deactivate
 ```
 
