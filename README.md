@@ -1,11 +1,7 @@
-Voici une version mise à jour avec des emojis pour rendre le README plus attrayant :
-
----
-
-# 🚗 Projet RLCode2-2 : Impact du Paramètre Alpha dans Q-Learning 🚗
+# 🚗🚗🚗 Projet RLCode2-2 : Impact du Paramètre Alpha dans Q-Learning 🚗🚗🚗
 
 --------------------
-## 🎮 Première exécution avec rendu visuel 🎮
+# 🎮 Première exécution avec rendu visuel 🎮
 --------------------
 
 ```bash
@@ -20,7 +16,7 @@ deactivate
 ```
 
 --------------------
-## 📊 Deuxième exécution sans rendu visuel 📊
+# 📊 Deuxième exécution sans rendu visuel 📊
 --------------------
 
 ```bash
@@ -35,7 +31,7 @@ deactivate
 ```
 
 --------------------
-## 🔍 Différences clés entre les deux fichiers **`main1-pygame-alphas.py`** et **`main2-matplotlib-alphas.py`** :
+# 🔍 Différences clés entre les deux fichiers **`main1-pygame-alphas.py`** et **`main2-matplotlib-alphas.py`** :
 --------------------
 
 ### 1. **Différence principale : Mode d'affichage pendant la simulation**
@@ -68,7 +64,7 @@ deactivate
 ### 4. **🎯 Scénarios d'utilisation**
 
 #### a) **`main1-pygame-alphas.py`** :
-- **Idéal pour les démonstrations interactives** où vous souhaitez montrer aux étudiants le comportement de l'agent en temps réel pendant l'apprentissage. Ils pourront voir comment l'agent explore l'environnement et s'améliore au fil du temps.
+- **Idéal pour les démonstrations interactives** où vous souhaitez observer le comportement de l'agent en temps réel pendant l'apprentissage. Vous pouvez voir comment l'agent explore l'environnement et s'améliore au fil du temps.
 
 #### b) **`main2-matplotlib-alphas.py`** :
 - **Meilleur pour des simulations rapides** où l'affichage en temps réel n'est pas nécessaire. Cela permet d'exécuter les simulations plus rapidement sans ouvrir des fenêtres graphiques. Il est utile lorsque vous souhaitez simplement analyser les résultats après l'exécution des essais.
