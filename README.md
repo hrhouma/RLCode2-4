@@ -76,3 +76,63 @@ deactivate
 
 Cela permet aux utilisateurs de choisir le script qui correspond le mieux à leurs besoins, selon qu'ils souhaitent une démonstration visuelle ou une exécution rapide sans visualisation.
 
+
+------------------
+# Annexe et Interprétation
+------------------
+
+![Figure_1](https://github.com/user-attachments/assets/5a7fdb88-634c-4a4d-9284-a804a95000d5)
+
+
+- Le code génère des visualisations de l'impact de différentes valeurs de **alpha (α)** sur la performance d'agents Q-Learning dans l'environnement **MountainCar-v0**. 
+- Il compare les résultats en termes de succès ou d'échecs pour chaque essai, ainsi que le nombre de pas nécessaires pour chaque essai.
+
+---
+
+### **Structure du Code :**
+
+#### 1. **Boucle d'entraînement et évaluation :**
+   - Le code entraîne des agents avec trois valeurs de **alpha** : **0.1, 0.5, 0.9**.
+   - Pour chaque valeur de **alpha**, l'agent est entraîné sur **2000 épisodes** puis évalué sur **10 essais**.
+   - **Résultats des essais** :
+     - Le **taux de succès** : Le nombre d'essais où l'agent a atteint son objectif (réussir à gravir la colline en moins de 200 pas).
+     - Le **nombre de pas** nécessaires pour atteindre l'objectif ou échouer.
+  
+#### 2. **Visualisation des résultats :**
+   - **Graphiques des succès/échecs** : Pour chaque valeur de **alpha**, un graphique indique si l'agent a réussi (1) ou échoué (0) à chaque essai.
+   - **Graphiques des pas de temps** : Un autre graphique montre le nombre de pas nécessaires pour chaque essai. Ces données sont représentées sous forme de courbes rouges.
+
+---
+
+### **Interprétation des graphiques :**
+
+#### **Alpha (α) = 0.1 :**
+   - **Graphique des succès (en bleu)** :
+     - L'agent a un taux de succès de **70%** (7 réussites sur 10).
+     - Cependant, il échoue à certains essais (entre les essais 4 et 6), ce qui suggère que la faible valeur d'**alpha** entraîne un apprentissage plus lent.
+   - **Graphique des pas de temps (en rouge)** :
+     - Le nombre de pas varie beaucoup, ce qui indique une certaine instabilité dans la performance. Par exemple, à l'essai 4, l'agent a besoin de plus de 220 pas, alors qu'à l'essai 10, il réussit avec beaucoup moins de pas (~140).
+
+#### **Alpha (α) = 0.5 :**
+   - **Graphique des succès (en bleu)** :
+     - Ici, l'agent a un taux de succès de **100%**. Il réussit tous ses essais, montrant que **α = 0.5** est une valeur qui permet un bon compromis entre exploration et exploitation.
+   - **Graphique des pas de temps (en rouge)** :
+     - Le nombre de pas est plus stable et tend vers une **moyenne de 150 pas** pour chaque essai, avec moins de fluctuations. Cela suggère que l'agent a appris une politique efficace avec cette valeur d'alpha.
+
+#### **Alpha (α) = 0.9 :**
+   - **Graphique des succès (en bleu)** :
+     - Comme pour **α = 0.5**, l'agent a un taux de succès de **100%**. Cependant, la performance ne semble pas aussi stable que pour **α = 0.5**.
+   - **Graphique des pas de temps (en rouge)** :
+     - Les résultats sont moins stables avec **α = 0.9**, avec des variations dans le nombre de pas, bien qu'elles soient moins extrêmes que pour **α = 0.1**. À l'essai 3, l'agent prend plus de pas que lors des autres essais (~148 contre ~142 dans les autres).
+
+---
+
+### **Analyse des résultats :**
+- **Alpha faible (0.1)** : L'agent prend plus de temps à apprendre, et son taux de succès est inférieur, bien qu'il parvienne à résoudre certains essais. La performance est instable.
+- **Alpha modéré (0.5)** : L'agent réussit tous les essais avec un nombre de pas relativement stable. Cette valeur d'**alpha** semble bien équilibrer exploration et exploitation.
+- **Alpha élevé (0.9)** : L'agent réussit également tous les essais, mais avec une performance moins stable, ce qui peut indiquer une exploration excessive.
+
+### **Conclusion pédagogique :**
+- Les graphiques montrent que **α = 0.5** semble être la valeur optimale dans cet environnement, offrant un bon compromis entre l'apprentissage rapide et une politique stable. Les valeurs d'alpha trop faibles ou trop élevées entraînent des performances moins stables.
+
+Ces graphiques vous permettent de **visualiser l'effet des différentes valeurs de taux d'apprentissage** et de comprendre comment elles influencent l'apprentissage d'un agent **Q-Learning** dans un environnement simulé.
